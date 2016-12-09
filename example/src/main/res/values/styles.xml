@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SlyceMessagingTheme">
+        <item name="backgroundColor">@color/background_white</item>
+        <item name="timestampTextColor">@color/text_black</item>
+        <item name="localBubbleBackground">#158CB4</item>
+        <item name="localBubbleTextColor">#FFFFFF</item>
+        <item name="externalBubbleBackground">#E5E5E5</item>
+        <item name="externalBubbleTextColor">@color/text_black</item>
+        <item name="snackbarBackground">@color/background_gray_darkest</item>
+        <item name="snackbarTitleColor">@color/text_black</item>
+        <item name="snackbarButtonColor">@color/text_blue</item>
+    </style>
+
 </resources>

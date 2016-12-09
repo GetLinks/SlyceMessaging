@@ -10,7 +10,9 @@ public enum MessageItemType {
     OUTGOING_TEXT,
     SPINNER,
     GENERAL_TEXT,
-    GENERAL_OPTIONS;
+    GENERAL_OPTIONS,
+    INCOMING_REQUEST_INTERVIEW,
+    OUTGOING_REQUEST_INTERVIEW;
 
     public static final MessageItemType values[] = values();
 }

@@ -12,6 +12,7 @@ import it.slyce.messaging.message.messageItem.externalUser.media.MessageExternal
 import it.slyce.messaging.message.messageItem.externalUser.text.MessageExternalUserTextViewHolder;
 import it.slyce.messaging.message.messageItem.general.generalOptions.MessageGeneralOptionsViewHolder;
 import it.slyce.messaging.message.messageItem.internalUser.media.MessageInternalUserViewHolder;
+import it.slyce.messaging.message.messageItem.internalUser.requestinterview.MessageInternalUserRequestInterviewHolder;
 import it.slyce.messaging.message.messageItem.internalUser.text.MessageInternalUserTextViewHolder;
 import it.slyce.messaging.message.messageItem.general.generalText.MessageGeneralTextViewHolder;
 import it.slyce.messaging.message.messageItem.spinner.SpinnerViewHolder;
@@ -75,6 +76,16 @@ public class MessageRecyclerAdapter extends RecyclerView.Adapter<MessageViewHold
             case GENERAL_OPTIONS:
                 View generalOptionsView = inflater.inflate(R.layout.item_message_general_options, parent, false);
                 viewHolder = new MessageGeneralOptionsViewHolder(generalOptionsView, customSettings);
+                break;
+
+//            case INCOMING_REQUEST_INTERVIEW:
+//                View scoutRequestInterviewView = inflater.inflate(R.layout.item_message_external_text, parent, false);
+//                viewHolder = new MessageExternalUserTextViewHolder(scoutRequestInterviewView, customSettings);
+//                break;
+
+            case OUTGOING_REQUEST_INTERVIEW:
+                View userRequestInterviewView = inflater.inflate(R.layout.item_message_user_text, parent, false);
+                viewHolder = new MessageInternalUserRequestInterviewHolder(userRequestInterviewView, customSettings);
                 break;
         }
 
