@@ -4,7 +4,9 @@ import android.content.Context;
 
 import it.slyce.messaging.message.messageItem.MessageItem;
 import it.slyce.messaging.message.messageItem.MessageRequestInterviewItemType;
+import it.slyce.messaging.message.messageItem.externalUser.requestinterview.MessageExternalUserRequestInterviewItem;
 import it.slyce.messaging.message.messageItem.externalUser.text.MessageExternalUserTextItem;
+import it.slyce.messaging.message.messageItem.internalUser.requestinterview.MessageInternalUserRequestInterviewItem;
 import it.slyce.messaging.message.messageItem.internalUser.text.MessageInternalUserTextItem;
 import it.slyce.messaging.message.messageItem.master.requestinterview.MessageRequestInterviewItem;
 
@@ -15,6 +17,7 @@ import it.slyce.messaging.message.messageItem.master.requestinterview.MessageReq
 public class RequestInterviewMessage extends Message {
 
     private MessageRequestInterviewItemType requestInterviewStatus;
+    private String timeSlot;
 
     public MessageRequestInterviewItemType getRequestInterviewStatus() {
         return requestInterviewStatus;
@@ -24,12 +27,20 @@ public class RequestInterviewMessage extends Message {
         this.requestInterviewStatus = requestInterviewStatus;
     }
 
+    public String getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(String timeSlot) {
+        this.timeSlot = timeSlot;
+    }
+
     @Override
     public MessageItem toMessageItem(Context context) {
         if (this.source == MessageSource.EXTERNAL_USER){
-            return new MessageRequestInterviewItem(this, context);
+            return new MessageExternalUserRequestInterviewItem(this, context);
         } else {
-            return new MessageRequestInterviewItem(this, context);
+            return new MessageInternalUserRequestInterviewItem(this, context);
         }
     }
 }

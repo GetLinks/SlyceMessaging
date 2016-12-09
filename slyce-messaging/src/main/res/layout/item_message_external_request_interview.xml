@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="@dimen/message_bubble_margin_top">
+
+    <FrameLayout
+        android:id="@+id/message_scout_text_image_view_avatar_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_oval_navy">
+
+        <it.slyce.messaging.view.text.FontTextView
+            android:id="@+id/message_scout_text_text_view_initials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"
+            app:font="museo_sans_500.otf"
+            tools:text="JF"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_scout_text_image_view_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_scout_text_view_group_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/message_scout_text_image_view_avatar_group"
+        android:background="@drawable/shape_rounded_rectangle_white"
+        android:padding="16dp">
+
+        <it.slyce.messaging.view.text.FontTextView
+            android:id="@+id/message_scout_text_text_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:gravity="left"
+            android:textColor="@color/text_navy"
+            android:textSize="14sp"
+            app:font="museo_sans_500.otf"
+            android:text="An interview has been created" />
+
+        <it.slyce.messaging.view.text.FontTextView
+            android:id="@+id/message_scout_text_time_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:gravity="left"
+            android:textColor="@color/text_navy"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:font="museo_sans_500.otf"
+            android:text="Nov 4, 2016 4:57 AM"
+            android:layout_below="@+id/message_scout_text_text_view_text"
+            android:layout_marginTop="6dp" />
+
+        <Button
+            style="@style/RequestInterviewActionButton"
+            android:text="ACCEPT"
+            android:id="@+id/button3"
+            android:layout_below="@+id/message_scout_text_time_slot"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            style="@style/RequestInterviewCalendarButton"
+            android:text="NEW TIME"
+            android:id="@+id/button2"
+            android:layout_alignBaseline="@+id/button3"
+            android:layout_alignBottom="@+id/button3"
+            android:layout_toRightOf="@+id/button3"
+            android:layout_toEndOf="@+id/button3" />
+    </RelativeLayout>
+
+    <it.slyce.messaging.view.text.FontTextView
+        android:id="@+id/message_scout_text_text_view_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_scout_text_view_group_bubble"
+        android:layout_below="@+id/message_scout_text_view_group_bubble"
+        android:layout_marginBottom="@dimen/message_timestamp_margin_bottom"
+        android:layout_marginTop="@dimen/message_timestamp_margin_top"
+        android:gravity="left"
+        android:singleLine="true"
+        android:textColor="@color/text_gray_darkest"
+        android:textSize="10sp"
+        tools:text="12:29pm" />
+</RelativeLayout>

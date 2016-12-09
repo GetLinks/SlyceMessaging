@@ -17,11 +17,6 @@
         <item name="externalBubbleTextColor">@color/text_black</item>
 
 
-        <item name="localRequestInterviewBackground">@color/background_getlinks</item>
-        <item name="localRequestInterviewTextColor">@color/text_white</item>
-        <item name="externalRequestInterviewBackground">@color/background_getlinks</item>
-        <item name="externalRequestInterviewTextColor">@color/text_black</item>
-
         <item name="snackbarBackground">@color/background_gray_darkest</item>
         <item name="snackbarTitleColor">@color/text_black</item>
         <item name="snackbarButtonColor">@color/text_blue</item>

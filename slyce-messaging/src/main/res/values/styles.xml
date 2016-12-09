@@ -22,10 +22,10 @@
         <item name="externalBubbleBackground">@color/background_gray</item>
         <item name="externalBubbleTextColor">@color/text_black</item>
 
-        <item name="localRequestInterviewBackground">@color/background_getlinks</item>
-        <item name="localRequestInterviewTextColor">@color/text_white</item>
+        <item name="localRequestInterviewBackground">@color/background_white</item>
+        <item name="localRequestInterviewTextColor">@color/text_black</item>
         <item name="externalRequestInterviewBackground">@color/background_getlinks</item>
-        <item name="externalRequestInterviewTextColor">@color/text_black</item>
+        <item name="externalRequestInterviewTextColor">@color/text_white</item>
 
         <item name="snackbarBackground">@color/background_gray_darkest</item>
         <item name="snackbarTitleColor">@color/text_black</item>
@@ -40,9 +40,12 @@
         <item name="backgroundTint">@color/background_white</item>
     </style>
 
-
     <style name="RequestInterviewActionButton" parent="RequestInterviewButton">
-        <item name="android:drawableLeft">@drawable/vd_ic_scout_carrot</item>
+        <item name="android:drawableLeft">@drawable/ic_check_circle</item>
+    </style>
+
+    <style name="RequestInterviewCalendarButton" parent="RequestInterviewButton">
+        <item name="android:drawableLeft">@drawable/ic_date_range</item>
     </style>
 
 </resources>

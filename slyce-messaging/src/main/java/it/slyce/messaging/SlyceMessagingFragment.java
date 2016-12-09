@@ -143,15 +143,35 @@ public class SlyceMessagingFragment extends Fragment implements OnClickListener 
         this.customSettings.backgroudColor = ta.getColor(R.styleable.SlyceMessagingTheme_backgroundColor, Color.GRAY);
         rootView.setBackgroundColor(this.customSettings.backgroudColor); // the background color
         this.customSettings.timestampColor = ta.getColor(R.styleable.SlyceMessagingTheme_timestampTextColor, Color.BLACK);
+
         this.customSettings.externalBubbleTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalBubbleTextColor, Color.WHITE);
         this.customSettings.externalBubbleBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalBubbleBackground, Color.WHITE);
         this.customSettings.localBubbleBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_localBubbleBackground, Color.WHITE);
         this.customSettings.localBubbleTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_localBubbleTextColor, Color.WHITE);
 
-        this.customSettings.externalRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewTextColor, Color.WHITE);
-        this.customSettings.externalRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewBackground, Color.WHITE);
-        this.customSettings.localRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewBackground, Color.WHITE);
-        this.customSettings.localRequestInterviewTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewTextColor, Color.WHITE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            this.customSettings.externalRequestInterviewTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewTextColor, getResources().getColor(R.color.text_white, null));
+        } else {
+            this.customSettings.externalRequestInterviewTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewTextColor, getResources().getColor(R.color.text_white));
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            this.customSettings.externalRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewBackground, getResources().getColor(R.color.background_getlinks, null));
+        } else {
+            this.customSettings.externalRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewBackground, getResources().getColor(R.color.background_getlinks));
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            this.customSettings.localRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewBackground, getResources().getColor(R.color.background_white, null));
+        } else {
+            this.customSettings.localRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewBackground, getResources().getColor(R.color.background_white));
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            this.customSettings.localRequestInterviewTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewTextColor, getResources().getColor(R.color.text_black, null));
+        } else {
+            this.customSettings.localRequestInterviewTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewTextColor, getResources().getColor(R.color.text_black));
+        }
 
         this.customSettings.snackbarBackground = ta.getColor(R.styleable.SlyceMessagingTheme_snackbarBackground, Color.WHITE);
         this.customSettings.snackbarButtonColor = ta.getColor(R.styleable.SlyceMessagingTheme_snackbarButtonColor, Color.WHITE);

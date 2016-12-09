@@ -80,7 +80,7 @@
             android:layout_alignParentStart="true" />
 
         <Button
-            style="@style/RequestInterviewActionButton"
+            style="@style/RequestInterviewCalendarButton"
             android:text="NEW TIME"
             android:id="@+id/button2"
             android:layout_alignBaseline="@+id/button3"

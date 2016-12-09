@@ -9,6 +9,7 @@ import java.util.List;
 
 import it.slyce.messaging.R;
 import it.slyce.messaging.message.messageItem.externalUser.media.MessageExternalUserMediaViewHolder;
+import it.slyce.messaging.message.messageItem.externalUser.requestinterview.MessageExternalUserRequestInterviewHolder;
 import it.slyce.messaging.message.messageItem.externalUser.text.MessageExternalUserTextViewHolder;
 import it.slyce.messaging.message.messageItem.general.generalOptions.MessageGeneralOptionsViewHolder;
 import it.slyce.messaging.message.messageItem.internalUser.media.MessageInternalUserViewHolder;
@@ -78,13 +79,13 @@ public class MessageRecyclerAdapter extends RecyclerView.Adapter<MessageViewHold
                 viewHolder = new MessageGeneralOptionsViewHolder(generalOptionsView, customSettings);
                 break;
 
-//            case INCOMING_REQUEST_INTERVIEW:
-//                View scoutRequestInterviewView = inflater.inflate(R.layout.item_message_external_text, parent, false);
-//                viewHolder = new MessageExternalUserTextViewHolder(scoutRequestInterviewView, customSettings);
-//                break;
+            case INCOMING_REQUEST_INTERVIEW:
+                View scoutRequestInterviewView = inflater.inflate(R.layout.item_message_external_request_interview, parent, false);
+                viewHolder = new MessageExternalUserRequestInterviewHolder(scoutRequestInterviewView, customSettings);
+                break;
 
             case OUTGOING_REQUEST_INTERVIEW:
-                View userRequestInterviewView = inflater.inflate(R.layout.item_message_request_interview, parent, false);
+                View userRequestInterviewView = inflater.inflate(R.layout.item_message_internal_request_interview, parent, false);
                 viewHolder = new MessageInternalUserRequestInterviewHolder(userRequestInterviewView, customSettings);
                 break;
         }
