@@ -12,6 +12,11 @@ public class CustomSettings {
     public int localBubbleTextColor;
     public int externalBubbleBackgroundColor;
     public int externalBubbleTextColor;
+
+    public int localRequestInterviewBackgroundColor;
+    public int localRequestInterviewTextColor;
+    public int externalRequestInterviewBackgroundColor;
+    public int externalRequestInterviewTextColor;
     public int snackbarBackground;
     public int snackbarTitleColor;
     public int snackbarButtonColor;

@@ -5,6 +5,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="colorControlHighlight">@color/selector_black_pressed</item>
+
     </style>
 
     <!-- App Theme -->
@@ -15,13 +16,33 @@
     <style name="MyTheme">
         <item name="backgroundColor">@color/background_white</item>
         <item name="timestampTextColor">@color/text_black</item>
+
         <item name="localBubbleBackground">@color/background_blue</item>
         <item name="localBubbleTextColor">@color/text_white</item>
         <item name="externalBubbleBackground">@color/background_gray</item>
         <item name="externalBubbleTextColor">@color/text_black</item>
+
+        <item name="localRequestInterviewBackground">@color/background_getlinks</item>
+        <item name="localRequestInterviewTextColor">@color/text_white</item>
+        <item name="externalRequestInterviewBackground">@color/background_getlinks</item>
+        <item name="externalRequestInterviewTextColor">@color/text_black</item>
+
         <item name="snackbarBackground">@color/background_gray_darkest</item>
         <item name="snackbarTitleColor">@color/text_black</item>
         <item name="snackbarButtonColor">@color/text_blue_lightest</item>
+    </style>
+
+    <style name="RequestInterviewButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/text_gray_darkest</item>
+        <item name="backgroundTint">@color/background_white</item>
+    </style>
+
+
+    <style name="RequestInterviewActionButton" parent="RequestInterviewButton">
+        <item name="android:drawableLeft">@drawable/vd_ic_scout_carrot</item>
     </style>
 
 </resources>

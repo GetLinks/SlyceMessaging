@@ -84,7 +84,7 @@ public class MessageRecyclerAdapter extends RecyclerView.Adapter<MessageViewHold
 //                break;
 
             case OUTGOING_REQUEST_INTERVIEW:
-                View userRequestInterviewView = inflater.inflate(R.layout.item_message_user_text, parent, false);
+                View userRequestInterviewView = inflater.inflate(R.layout.item_message_request_interview, parent, false);
                 viewHolder = new MessageInternalUserRequestInterviewHolder(userRequestInterviewView, customSettings);
                 break;
         }

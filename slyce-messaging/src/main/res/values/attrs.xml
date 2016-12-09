@@ -38,6 +38,12 @@
         <attr name="localBubbleTextColor" format="color"/>
         <attr name="externalBubbleBackground" format="color"/>
         <attr name="externalBubbleTextColor" format="color"/>
+
+        <attr name="localRequestInterviewBackground" format="color"/>
+        <attr name="localRequestInterviewTextColor" format="color"/>
+        <attr name="externalRequestInterviewBackground" format="color"/>
+        <attr name="externalRequestInterviewTextColor" format="color"/>
+
         <attr name="snackbarBackground" format="color"/>
         <attr name="snackbarTitleColor" format="color"/>
         <attr name="snackbarButtonColor" format="color"/>

@@ -3,6 +3,7 @@ package it.slyce.messaging.message.messageItem.master.requestinterview;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import it.slyce.messaging.message.messageItem.MessageViewHolder;
@@ -13,7 +14,8 @@ import it.slyce.messaging.utils.CustomSettings;
  */
 public abstract class MessageRequestInterviewViewHolder extends MessageViewHolder {
     public TextView text;
-    public FrameLayout bubble;
+    public TextView timeslot;
+    public RelativeLayout bubble;
 
     public MessageRequestInterviewViewHolder(View itemView, CustomSettings customSettings) {
         super(itemView, customSettings);

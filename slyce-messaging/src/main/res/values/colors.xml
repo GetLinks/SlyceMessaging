@@ -8,6 +8,7 @@
     <color name="background_navy">#353556</color>
     <color name="background_gray">#BDBDBD</color>
     <color name="background_blue">#202089</color>
+    <color name="background_getlinks">#1BAAA6</color>
     <color name="background_gray_darkest">#82898D</color>
     <color name="stroke_blue_lightest">#E8E8F3</color>
     <color name="selector_black_pressed">#1F000000</color>

@@ -39,15 +39,15 @@ public class MessageRequestInterviewItem extends MessageItem {
             final MessageRequestInterviewViewHolder messageTextViewHolder = (MessageRequestInterviewViewHolder) messageViewHolder;
 
             // Get content
-//            String date = DateUtils.getTimestamp(context, message.getDate());
+            String date = DateUtils.getTimestamp(context, message.getDate());
 //            String text = ((RequestInterviewMessage)message).getText();
-//            this.avatarUrl = message.getAvatarUrl();
-//            this.initials = message.getInitials();
+            this.avatarUrl = message.getAvatarUrl();
+            this.initials = message.getInitials();
 //
 //            // Populate views with content
 //            messageTextViewHolder.initials.setText(initials  != null ? initials : "");
 //            messageTextViewHolder.text.setText(text != null ? text : "");
-//            messageTextViewHolder.timestamp.setText(date != null ? date : "");
+            messageTextViewHolder.timestamp.setText(date != null ? date : "");
 //
 //            messageTextViewHolder.bubble.setOnLongClickListener(new View.OnLongClickListener() {
 //                @Override
@@ -72,9 +72,9 @@ public class MessageRequestInterviewItem extends MessageItem {
 //                }
 //            });
 //
-//            if (isFirstConsecutiveMessageFromSource) {
-//                Glide.with(context).load(avatarUrl).into(messageTextViewHolder.avatar);
-//            }
+            if (isFirstConsecutiveMessageFromSource) {
+                Glide.with(context).load(avatarUrl).into(messageTextViewHolder.avatar);
+            }
 
             //chat profile image
             messageTextViewHolder.avatar.setVisibility(isFirstConsecutiveMessageFromSource && !TextUtils.isEmpty(avatarUrl) ? View.VISIBLE : View.INVISIBLE);

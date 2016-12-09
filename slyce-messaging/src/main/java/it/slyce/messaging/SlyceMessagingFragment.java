@@ -147,6 +147,12 @@ public class SlyceMessagingFragment extends Fragment implements OnClickListener 
         this.customSettings.externalBubbleBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalBubbleBackground, Color.WHITE);
         this.customSettings.localBubbleBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_localBubbleBackground, Color.WHITE);
         this.customSettings.localBubbleTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_localBubbleTextColor, Color.WHITE);
+
+        this.customSettings.externalRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewTextColor, Color.WHITE);
+        this.customSettings.externalRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_externalRequestInterviewBackground, Color.WHITE);
+        this.customSettings.localRequestInterviewBackgroundColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewBackground, Color.WHITE);
+        this.customSettings.localRequestInterviewTextColor = ta.getColor(R.styleable.SlyceMessagingTheme_localRequestInterviewTextColor, Color.WHITE);
+
         this.customSettings.snackbarBackground = ta.getColor(R.styleable.SlyceMessagingTheme_snackbarBackground, Color.WHITE);
         this.customSettings.snackbarButtonColor = ta.getColor(R.styleable.SlyceMessagingTheme_snackbarButtonColor, Color.WHITE);
         this.customSettings.snackbarTitleColor = ta.getColor(R.styleable.SlyceMessagingTheme_snackbarTitleColor, Color.WHITE);
